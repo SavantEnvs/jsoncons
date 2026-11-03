@@ -1,0 +1,9 @@
+project: savantenvs/jsoncons
+target: fuzz_msgpack_decode_iterator_source
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_msgpack_decode_iterator_source/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_msgpack_decode_iterator_source
+    libfuzzer: true
+    timeout: 10

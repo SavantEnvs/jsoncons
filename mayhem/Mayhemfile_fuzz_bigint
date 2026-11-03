@@ -1,0 +1,9 @@
+project: savantenvs/jsoncons
+target: fuzz_bigint
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bigint/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bigint
+    libfuzzer: true
+    timeout: 10
